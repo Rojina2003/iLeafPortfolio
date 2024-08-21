@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ 
+    .border {
+      border: 1px 0px solid transparent;
+      border-image: radial-gradient(circle, #57773A 0%, #10120d 100%);
+      border-image-slice: 1;
+      padding: 25px;
+    }
