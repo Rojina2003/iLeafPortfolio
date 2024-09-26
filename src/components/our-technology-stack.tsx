@@ -26,191 +26,332 @@ import data2 from "../assets/images/ourTechnologyStack/data2.png";
 import data3 from "../assets/images/ourTechnologyStack/data3.png";
 import data4 from "../assets/images/ourTechnologyStack/data4.png";
 import data5 from "../assets/images/ourTechnologyStack/data5.png";
+import ContentWrapper from "../ui/wrappers";
 
 const OurTechnologyStack = () => {
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
+  const [hoveredImageName, setHoveredImageName] = useState<string | null>(null);
 
-  const handleMouseEnter = (category: string) => {
+  const handleMouseEnter = (category: string, imageName: string | null) => {
     setHoveredCategory(category);
+    setHoveredImageName(imageName);
   };
 
   const handleMouseLeave = () => {
     setHoveredCategory(null);
+    setHoveredImageName(null);
   };
 
   return (
-    <div className="bg-black font-primary text-white font-extralight text-[40.86px] pl-[70px] pt-[110px] ">
-      <div className="p-5">Our Technology Stack</div>
-      <div className="pt-[52px] pb-[142px] ">
-      <div className="max-w-[1295px]  border-[1px] border-[#818181] rounded-3xl ">
-        <div className="flex font-bold text-[20px] gap-[50px] p-[28px]">
-          <h1
-            onMouseEnter={() => handleMouseEnter("web")}
-            onMouseLeave={handleMouseLeave}
-            className={hoveredCategory && hoveredCategory !== "web" ? "opacity-50" : ""}
-          >
-            Web Platforms
-          </h1>
-          <h1
-            onMouseEnter={() => handleMouseEnter("dev")}
-            onMouseLeave={handleMouseLeave}
-            className={hoveredCategory && hoveredCategory !== "dev" ? "opacity-50" : ""}
-          >
-            Development Framework
-          </h1>
-          <h1
-            onMouseEnter={() => handleMouseEnter("mob")}
-            onMouseLeave={handleMouseLeave}
-            className={hoveredCategory && hoveredCategory !== "mob" ? "opacity-50" : ""}
-          >
-            Mobile Platforms
-          </h1>
-          <h1
-            onMouseEnter={() => handleMouseEnter("cloud")}
-            onMouseLeave={handleMouseLeave}
-            className={hoveredCategory && hoveredCategory !== "cloud" ? "opacity-50" : ""}
-          >
-            Cloud Services
-          </h1>
-          <h1
-            onMouseEnter={() => handleMouseEnter("data")}
-            onMouseLeave={handleMouseLeave}
-            className={hoveredCategory && hoveredCategory !== "data" ? "opacity-50" : ""}
-          >
-            Data Management
-          </h1>
+    <div className="bg-black font-primary text-white font-extralight text-[40.86px]  pt-[110px] ">
+      <ContentWrapper>
+        <div className="py-5 lg:text-[40.86px] text-[26px] ">
+          Our Technology Stack
         </div>
-        <div className="grid grid-cols-17 gap-[14px] p-[27px]">
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          
-          <div className={`rounded-[14px] ${hoveredCategory === "web" ? "opacity-100" : "opacity-50"}`}>
-            <img src={web1}  />
-          </div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "web" ? "opacity-100" : "opacity-50"}`}>
-            <img src={web2}  />
-          </div>
+        <div className="lg:pt-[52px] pb-[142px] ">
+          <div className="max-w-[1295px]  border-[1px] border-[#818181] rounded-3xl ">
+            <div className="lg:flex font-bold lg:text-[20px] text-xs gap-[50px] p-[28px]">
+              <h1
+                onMouseEnter={() => handleMouseEnter("web", null)}
+                onMouseLeave={handleMouseLeave}
+                className={
+                  hoveredCategory && hoveredCategory !== "web"
+                    ? "opacity-50"
+                    : ""
+                }
+              >
+                Web Platforms
+              </h1>
+              <h1
+                onMouseEnter={() => handleMouseEnter("dev", null)}
+                onMouseLeave={handleMouseLeave}
+                className={
+                  hoveredCategory && hoveredCategory !== "dev"
+                    ? "opacity-50"
+                    : ""
+                }
+              >
+                Development Framework
+              </h1>
+              <h1
+                onMouseEnter={() => handleMouseEnter("mob", null)}
+                onMouseLeave={handleMouseLeave}
+                className={
+                  hoveredCategory && hoveredCategory !== "mob"
+                    ? "opacity-50"
+                    : ""
+                }
+              >
+                Mobile Platforms
+              </h1>
+              <h1
+                onMouseEnter={() => handleMouseEnter("cloud", null)}
+                onMouseLeave={handleMouseLeave}
+                className={
+                  hoveredCategory && hoveredCategory !== "cloud"
+                    ? "opacity-50"
+                    : ""
+                }
+              >
+                Cloud Services
+              </h1>
+              <h1
+                onMouseEnter={() => handleMouseEnter("data", null)}
+                onMouseLeave={handleMouseLeave}
+                className={
+                  hoveredCategory && hoveredCategory !== "data"
+                    ? "opacity-50"
+                    : ""
+                }
+              >
+                Data Management
+              </h1>
+            </div>
+            <div className="grid lg:grid-cols-17 grid-cols-5 gap-2 p-[27px]">
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
 
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "cloud" ? "opacity-100" : "opacity-50"}`}>
-            <img src={cloud1}  />
-          </div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div
+                className={`rounded-[14px] ${
+                  hoveredCategory === "web" ? "opacity-100" : "opacity-50"
+                }`}
+                onMouseEnter={() => handleMouseEnter("web", "Web 1")} 
+                onMouseLeave={handleMouseLeave}
+              >
+                <img src={web1} />
+                {hoveredCategory === "web" && hoveredImageName === "Web 1" && (
+                  <div className="text-center text-white text-sm">Web 1</div>
+                )}
+              </div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "web" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={web2} />
+              </div>
 
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "mob" ? "opacity-100" : "opacity-50"}`}>
-            <img src={mob1}  />
-          </div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "cloud" ? "opacity-100" : "opacity-50"}`}>
-            <img src={cloud2}  />
-          </div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "cloud" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={cloud1} />
+              </div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
 
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "mob" ? "opacity-100" : "opacity-50"}`}>
-            <img src={mob2}  />
-          </div>
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "mob" ? "opacity-100" : "opacity-50"}`}>
-            <img src={mob3}  />
-          </div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "mob" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={mob1} />
+              </div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "cloud" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={cloud2} />
+              </div>
 
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "dev" ? "opacity-100" : "opacity-50"}`}>
-            <img src={dev1}  />
-          </div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "web" ? "opacity-100" : "opacity-50"}`}>
-            <img src={web3}  />
-          </div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "dev" ? "opacity-100" : "opacity-50"}`}>
-            <img src={dev2}  />
-          </div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "web" ? "opacity-100" : "opacity-50"}`}>
-            <img src={web4}  />
-          </div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "web" ? "opacity-100" : "opacity-50"}`}>
-            <img src={web5}  />
-          </div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "web" ? "opacity-100" : "opacity-50"}`}>
-            <img src={web6}  />
-          </div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "data" ? "opacity-100" : "opacity-50"}`}>
-            <img src={data1}  />
-          </div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "web" ? "opacity-100" : "opacity-50"}`}>
-            <img src={web7}  />
-          </div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "cloud" ? "opacity-100" : "opacity-50"}`}>
-            <img src={cloud3}  />
-          </div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "data" ? "opacity-100" : "opacity-50"}`}>
-            <img src={data2}  />
-          </div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "dev" ? "opacity-100" : "opacity-50"}`}>
-            <img src={dev3}  />
-          </div>
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "cloud" ? "opacity-100" : "opacity-50"}`}>
-            <img src={cloud4}  />
-          </div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "data" ? "opacity-100" : "opacity-50"}`}>
-            <img src={data3}  />
-          </div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "data" ? "opacity-100" : "opacity-50"}`}>
-            <img src={data4}  />
-          </div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "dev" ? "opacity-100" : "opacity-50"}`}>
-            <img src={dev4}  />
-          </div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "cloud" ? "opacity-100" : "opacity-50"}`}>
-            <img src={cloud5}  />
-          </div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "mob" ? "opacity-100" : "opacity-50"}`}>
-            <img src={mob4}  />
-          </div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "web" ? "opacity-100" : "opacity-50"}`}>
-            <img src={web8}  />
-          </div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "data" ? "opacity-100" : "opacity-50"}`}>
-            <img src={data5}  />
-          </div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
-          <div className={`h-[59.49px] rounded-[14px] ${hoveredCategory === "dev" ? "opacity-100" : "opacity-50"}`}>
-            <img src={dev5}  />
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "mob" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={mob2} />
+              </div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "mob" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={mob3} />
+              </div>
+
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "dev" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={dev1} />
+              </div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "web" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={web3} />
+              </div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "dev" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={dev2} />
+              </div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "web" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={web4} />
+              </div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "web" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={web5} />
+              </div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "web" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={web6} />
+              </div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "data" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={data1} />
+              </div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "web" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={web7} />
+              </div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "cloud" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={cloud3} />
+              </div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "data" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={data2} />
+              </div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "dev" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={dev3} />
+              </div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "cloud" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={cloud4} />
+              </div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "data" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={data3} />
+              </div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "data" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={data4} />
+              </div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "dev" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={dev4} />
+              </div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "cloud" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={cloud5} />
+              </div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "mob" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={mob4} />
+              </div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "web" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={web8} />
+              </div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "data" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={data5} />
+              </div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div className="border-[1px] h-[59.49px] rounded-[14px] opacity-[50%]"></div>
+              <div
+                className={`h-[59.49px] rounded-[14px] ${
+                  hoveredCategory === "dev" ? "opacity-100" : "opacity-50"
+                }`}
+              >
+                <img src={dev5} />
+              </div>
+            </div>
           </div>
         </div>
-        </div>
-      </div>
+      </ContentWrapper>
     </div>
   );
 };
