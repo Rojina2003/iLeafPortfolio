@@ -20,7 +20,6 @@ import sworkit4 from "../assets/images/webMob/sworkit/sworkit4.png";
 import sworkit8 from "../assets/images/webMob/sworkit/sworkit8.png";
 import bio1 from "../assets/images/webMob/biotecnika/bio1.png";
 import bio2 from "../assets/images/webMob/biotecnika/bio2.png";
-import bio3 from "../assets/images/webMob/biotecnika/bio3.png";
 import bio4 from "../assets/images/webMob/biotecnika/bio4.png";
 import odin1 from "../assets/images/webMob/odin/odin1.png";
 import odin2 from "../assets/images/webMob/odin/odin2.png";
@@ -28,9 +27,6 @@ import odin3 from "../assets/images/webMob/odin/odin3.png";
 import bmjme1 from "../assets/images/webMob/bmjme/bmjme1.png";
 import bmjme2 from "../assets/images/webMob/bmjme/bmjme2.png";
 import bmjme3 from "../assets/images/webMob/bmjme/bmjme3.png";
-import bmjme4 from "../assets/images/webMob/bmjme/bmjme4.png";
-import bmjme5 from "../assets/images/webMob/bmjme/bmjme5.png";
-import bmjme6 from "../assets/images/webMob/bmjme/bmjme6.png";
 import bmjme7 from "../assets/images/webMob/bmjme/bmjme7.png";
 import ekool1 from "../assets/images/webMob/ekool/ekool1.png";
 import ekool2 from "../assets/images/webMob/ekool/ekool2.png";
@@ -45,7 +41,6 @@ import logically3 from "../assets/images/webMob/logically/logically3.png";
 import driveitaway1 from "../assets/images/webMob/driveitaway/driveitaway1.png";
 import driveitaway2 from "../assets/images/webMob/driveitaway/driveitaway2.png";
 import driveitaway3 from "../assets/images/webMob/driveitaway/driveitaway3.png";
-import driveitaway4 from "../assets/images/webMob/driveitaway/driveitaway4.png";
 import driveitaway5 from "../assets/images/webMob/driveitaway/driveitaway5.png";
 import joyn1 from "../assets/images/webMob/joyn/joyn1.png";
 import joyn2 from "../assets/images/webMob/joyn/joyn2.png";
@@ -63,9 +58,6 @@ import briind3 from "../assets/images/webMob/briind/briind3.png";
 import cuia1 from "../assets/images/webMob/cuia/cuia1.png";
 import cuia2 from "../assets/images/webMob/cuia/cuia2.png";
 import cuia3 from "../assets/images/webMob/cuia/cuia3.png";
-import cuia4 from "../assets/images/webMob/cuia/cuia4.png";
-import cuia5 from "../assets/images/webMob/cuia/cuia5.png";
-import cuia6 from "../assets/images/webMob/cuia/cuia6.png";
 import letshego1 from "../assets/images/webMob/letshego/letshego1.png";
 import letshego2 from "../assets/images/webMob/letshego/letshego2.png";
 import letshego4 from "../assets/images/webMob/letshego/letshego4.png";
@@ -125,10 +117,9 @@ const webmobData: {
                 <p className="lg:text-xs text-[8px] font-normal leading-[14px] ">
                   Their products are helping to make homes
                   <p className="font-semibold lg:text-xl text-[15px] ">
-                    safer{" "}
+                    safer
                     <span className="font-normal lg:text-xs text-[8px]">
-                      {" "}
-                      & more{" "}
+                      & more
                     </span>
                     secure
                   </p>
@@ -291,28 +282,28 @@ const webmobData: {
         companyName: "BiotecNika",
         gridElements: (
           <div className="grid grid-cols-3 gap-[11px] bg-white font-primary  ">
-            <div className="bg-primary-bg rounded-[20px] col-span-2 flex flex-col justify-center items-center px-5 ">
-              <p className=" text-xs ">
+            <div className="bg-primary-bg rounded-[20px] col-span-2 flex flex-col justify-center items-center px-5 py-3 ">
+              <p className=" lg:text-xs text-[9px] ">
                 BioTecNika has grown into one of
-                <p className="text-xl font-semibold leading-6">
+                <p className="lg:text-xl text-base font-semibold lg:leading-6 leading-4 ">
                   India's largest magazines in the field of biotechnology
                 </p>
               </p>
             </div>
-            <div className="bg-[#404042] rounded-[20px] row-span-2 relative overflow-hidden">
-              <img src={bio2} className="absolute left-4 top-4 " />
-              <img src={bio3} className="absolute -bottom-5 right-4 " />
+            <div className="bg-[#404042] rounded-[20px] row-span-2 h-full ">
+              <img src={bio2} className=" h-full " />
+              
             </div>
             <div className="bg-primary-bg rounded-[20px] flex justify-center items-center ">
-              <p className="text-xs text-center">
+              <p className="lg:text-xs text-[9px] text-center">
                 {" "}
                 Launched a web TV channel, expanding their reach beyond print
                 media
               </p>
             </div>
             <div className="bg-primary-bg rounded-[20px] bg-[url('/src/assets/images/webMob/biotecnika/bioBg1.png')] bg-no-repeat  flex justify-center items-center ">
-              <p className="text-center text-xs font-normal ">
-                Over<p className="text-xl font-semibold ">1L+</p>downloads on
+              <p className="text-center tlg:text-xs text-[9px] font-normal ">
+                Over<p className="lg:text-xl text-base font-semibold ">1L+</p>downloads on
                 Play Store
               </p>
             </div>
@@ -376,24 +367,22 @@ const webmobData: {
         gridElements: (
           <div className="grid grid-cols-4 gap-[11px] bg-white font-primary  ">
             <div className="bg-primary-bg rounded-[20px] col-span-2 flex flex-col justify-center items-center  ">
-              <p className="text-xs font-normal px-5 ">
+              <p className="lg:text-xs text-[9px] font-normal py-3 px-5 ">
                 The BMJ was one of the first major medical journals to launch a
                 website and made most of its content freely available online
                 since 1995
               </p>
             </div>
             <div className="bg-primary-bg rounded-[20px] col-span-2  bg-[url('/src/assets/images/webMob/crunch/crunchbg.png')] bg-no-repeat flex justify-center items-center ">
-              <p className="text-xs font-normal px-5">
+              <p className="lg:text-xs text-[9px] font-normal px-5">
                 The BMJ published the first of many seminal papers on antisepsis
                 by Joseph Lister in 1867{" "}
               </p>
             </div>
             <div className="bg-primary-bg rounded-[20px] col-span-2 flex ">
-              <div className="flex items-end gap-[9px] pl-[20px] overflow-hidden  ">
-                <img src={bmjme3} className="h-[65%]  " />
-                <img src={bmjme4} className="h-[65%]  " />
-                <img src={bmjme5} className="h-[65%]  " />
-                <img src={bmjme6} className="h-[65%]  " />
+              <div className="flex items-end justify-end   ">
+                <img src={bmjme3}/>
+                
               </div>
             </div>
             <div className="bg-[#404042] col-span-2 flex justify-center items-end rounded-[20px]   ">
@@ -424,7 +413,7 @@ const webmobData: {
         gridElements: (
           <div className="grid grid-cols-3 gap-[11px] bg-white font-primary  ">
             <div className="bg-primary-bg rounded-[20px] flex flex-col justify-center col-span-2 items-center px-5 ">
-              <p className="text-xs font-normal">
+              <p className="lg:text-xs text-[9px] font-normal">
                 eKool is used in 90% of Estonia's school network, connecting
                 students, parents and teachers
               </p>
@@ -436,14 +425,14 @@ const webmobData: {
               <img src={ekool2} />
             </div>
             <div className="bg-primary-bg rounded-[20px] flex justify-center items-center ">
-              <p className="text-xs font-normal px-5">
+              <p className="lg:text-xs text-[9px] font-normal py-3 px-5">
                 eKool saves teachers up to 50% of time spent on administrative
                 tasks and fosters better communication between schools, parents
                 and students{" "}
               </p>
             </div>
-            <div className="bg-primary-bg  rounded-[20px] bg-[url('/src/assets/images/webMob/crunch/crunchbg.png')] bg-no-repeat  flex  justify-center items-center ">
-              <p className="text-xs font-normal text-center">
+            <div className="bg-primary-bg rounded-[20px] bg-[url('/src/assets/images/webMob/crunch/crunchbg.png')] bg-no-repeat  flex  justify-center items-center ">
+              <p className="lg:text-xs text-[9px] font-normal text-center">
                 eKool is credited with reducing lesson skipping and improving
                 learning results
               </p>
@@ -466,7 +455,7 @@ const webmobData: {
         ],
         companyName: "Scandlearn",
         gridElements: (
-          <div className="grid grid-cols-3 gap-[11px] bg-white">
+          <div className="grid grid-cols-3 gap-[11px] space-x-2 bg-white">
             <div className="grid gap-[11px] ">
               <div className="bg-primary-bg rounded-[20px] bg-[url('/src/assets/images/webMob/roost/roostbg.png')] bg-no-repeat flex items-center justify-center text-center">
                 <p className=" font-semibold text-xl px-5 ">
@@ -491,15 +480,13 @@ const webmobData: {
                 </div>
                 <div className=" col-span-2 flex gap-[11px] ">
                   <img src={scandlearn1} />
-                  <img src={scandlearn} className="w-[80%] " />
+                  <img src={scandlearn} className="lg:w-[80%] w-[65%] rounded-[20px] " />
                 </div>
-                <div className="bg-primary-bg rounded-[20px] col-span-2 flex justify-between  ">
+                <div className="bg-primary-bg rounded-[20px] col-span-2  ">
                   <img
                     srcSet={scandlearn3}
-                    className="h-fit w-fit pl-[30px] "
+                    className=" "
                   />
-
-                  {/* <img src={scandlearn1} className="h-fit px-2 py-2 " /> */}
                 </div>
 
                 <div className="bg-primary-bg rounded-[20px]  flex justify-center items-center   col-span-2 py-[48px] px-8">
@@ -534,7 +521,7 @@ const webmobData: {
               <img src={logically2} className="h-[50%]  w-[50%] " />
             </div>
             <div className="bg-primary-bg px-5 py-5 text-center bg-[url('/src/assets/images/webMob/crunch/crunchbg.png')] bg-no-repeat flex justify-center items-end rounded-[20px]   ">
-              <p>
+              <p className="text-xs" >
                 Helping to reduce the harms associated with misleading or
                 deceptive information online
               </p>
@@ -564,30 +551,30 @@ const webmobData: {
         companyName: "DriveItAway",
         gridElements: (
           <div className="grid grid-cols-3 gap-[11px] bg-white font-primary  ">
-            <div className="bg-primary-bg rounded-[20px] col-span-2 flex flex-col justify-center items-center px-5 ">
-              <p className=" text-xs font-normal text-center ">
+            <div className="bg-primary-bg rounded-[20px] col-span-2 flex flex-col justify-center items-center py-3 px-5 ">
+              <p className=" lg:text-xs text-[9px]  font-normal text-center ">
                 Helps customers achieve car ownership and improve credit scores
               </p>
             </div>
-            <div className="bg-[#404042] rounded-[20px] row-span-3 relative overflow-hidden">
-              <img src={driveitaway3} className="absolute left-4 top-4 " />
-              <img src={driveitaway4} className="absolute -bottom-5 right-4 " />
+            <div className="bg-[#404042] rounded-[20px] row-span-3 ">
+              <img src={driveitaway3} className=" h-full " />
+              
             </div>
-            <div className="bg-primary-bg rounded-[20px] flex justify-center items-center col-span-2 ">
+            <div className="bg-primary-bg rounded-[20px] flex justify-center items-center px-3 py-3 col-span-2 ">
               <img src={driveitaway1} />
             </div>
             <div className="bg-primary-bg rounded-[20px]   flex justify-center items-center ">
-              <p className="text-center text-xs font-normal px-5 ">
+              <p className="text-center lg:text-xs text-[9px] font-normal px-5 ">
                 Provides flexible car access for diverse needs
               </p>
             </div>
             <div className="bg-primary-bg rounded-[20px] bg-[url('/src/assets/images/webMob/biotecnika/bioBg1.png')] bg-no-repeat flex justify-center items-center ">
-              <p className="text-center text-xs font-normal px-5 ">
+              <p className="text-center lg:text-xs text-[9px] font-normal py-3 px-5 ">
                 Recognition within the industry for its innovative approach to
                 car acquisition.
               </p>
             </div>
-            <div className="bg-[#404042] rounded-[20px] flex justify-center items-center ">
+            <div className="bg-[#404042] rounded-[20px] flex justify-center px-3 items-center ">
               <img src={driveitaway5} />
             </div>
             <div className="bg-gradient-to-r from-[#BAEF02] to-[#D9F189] rounded-[20px] col-span-2  flex justify-center items-center ">
@@ -631,7 +618,7 @@ const webmobData: {
                     Better decision-making based on real-time data
                   </h1>
                 </div>
-                <div className="bg-[#404042] rounded-[20px] col-span-2 flex gap-[22px] py-5 items-center justify-center">
+                <div className="bg-[#404042] rounded-[20px] col-span-2 flex lg:flex-row flex-col gap-[22px] py-5 items-center justify-center">
                   <img srcSet={joyn1} className="w-[60%] " />
                   <img srcSet={joyn3} />
                 </div>
@@ -667,7 +654,7 @@ const webmobData: {
         companyName: "TUVU ",
         gridElements: (
           <div className="grid grid-cols-3 gap-[11px] bg-white font-primary  ">
-            <div className="bg-primary-bg rounded-[20px] col-span-2 flex flex-col justify-center items-center px-5 ">
+            <div className="bg-primary-bg rounded-[20px] col-span-2 flex flex-col justify-center items-center py-5 px-5 ">
               <p className=" text-xs ">
                 TUVU stands out by offering an
                 <p className="text-xl font-semibold leading-6">
@@ -681,12 +668,12 @@ const webmobData: {
             <div className="bg-primary-bg rounded-[20px] flex justify-center items-center ">
               <p className="text-xs text-center">Growing Community</p>
             </div>
-            <div className="bg-primary-bg rounded-[20px] bg-[url('/src/assets/images/webMob/biotecnika/bioBg1.png')] bg-no-repeat  flex justify-center items-center ">
+            <div className="bg-primary-bg rounded-[20px] py-3 bg-[url('/src/assets/images/webMob/biotecnika/bioBg1.png')] bg-no-repeat  flex justify-center items-center ">
               <p className="text-center  text-xl font-semibold  ">
                 Positive<p className="text-xs font-normal">User Experience</p>
               </p>
             </div>
-            <div className="bg-[#404042] rounded-[20px] flex justify-center items-center ">
+            <div className="bg-[#404042] px-4 rounded-[20px] flex justify-center items-center ">
               <img src={tuvu2} />
             </div>
             <div className="bg-primary-bg rounded-[20px] col-span-2 bg-[url('/src/assets/images/webMob/biotecnika/biobg.png')] bg-no-repeat flex justify-center items-center ">
@@ -704,26 +691,26 @@ const webmobData: {
         companyName: "Shoot the Frame",
         gridElements: (
           <div className="grid grid-cols-3 gap-[11px] bg-white font-primary  ">
-            <div className="bg-primary-bg rounded-[20px] flex flex-col justify-center col-span-2 items-center px-5 ">
+            <div className="bg-primary-bg py-3 rounded-[20px] flex flex-col justify-center col-span-2 items-center px-5 ">
               <img src={shoot4} />
             </div>
             <div className="bg-primary-bg rounded-[20px] row-span-2 flex justify-center items-end ">
               <img src={shoot1} />
             </div>
             <div className="bg-primary-bg rounded-[20px] flex justify-center items-center ">
-              <p className="text-xs font-normal px-5 text-center ">
+              <p className="lg:text-xs text-[9px] font-normal px-5 text-center ">
                 showcases finalist & winner photos in their gallery, potentially
                 leading to increased exposure for talented photographers
               </p>
             </div>
             <div className="bg-primary-bg rounded-[20px] flex justify-center items-center ">
-              <p className="text-xs font-normal px-5 text-center ">
+              <p className="lg:text-xs text-[9px] font-normal px-5 text-center ">
                 Shoot The Frame as a "fantastic photo competition" that attracts
                 top photographers from around the world
               </p>
             </div>
             <div className="bg-primary-bg  rounded-[20px] bg-[url('/src/assets/images/webMob/crunch/crunchbg.png')] bg-no-repeat  flex  justify-center items-center ">
-              <p className="text-xs font-normal px-5 text-center">
+              <p className="lg:text-xs text-[9px] font-normal px-5 text-center">
                 Their website mentions an association with the International
                 Photography Festival (IPF), showcasing winning photos from Shoot
                 The Frame
@@ -761,7 +748,7 @@ const webmobData: {
               <img src={briind2} />
             </div>
             <div className="bg-primary-bg rounded-[20px] flex ">
-              <p className="text-base font-semibold text-center flex justify-center items-center px-5 ">
+              <p className="lg:text-base text-xs font-semibold text-center flex justify-center items-center lg:px-5 ">
                 Potential Growth & Recognition
               </p>
             </div>
@@ -779,31 +766,31 @@ const webmobData: {
         companyName: "Cula ",
         gridElements: (
           <div className="grid grid-cols-3 gap-[11px] bg-white font-primary  ">
-            <div className="bg-primary-bg rounded-[20px] col-span-2 flex flex-col justify-center items-center px-5 ">
-              <p className=" text-xs font-normal text-center ">
+            <div className="bg-primary-bg rounded-[20px] col-span-2 flex flex-col justify-center items-center py-3 px-5 ">
+              <p className=" lg:text-xs text-[8px] font-normal  text-center ">
                 Cula has built a vast network of
-                <p className="text-xl font-semibold leading-6">
+                <p className="lg:text-xl text-base font-semibold lg:leading-6 leading-4">
                   600+ device partners
                 </p>
                 solidifying its position in the device subscription industry
               </p>
             </div>
-            <div className="bg-[#404042] rounded-[20px] flex items-end justify-center row-span-2  ">
+            <div className="bg-gradient-to-r from-[#BAEF02] to-[#D9F189] rounded-[20px] flex items-end justify-center row-span-2  ">
               <img src={cuia1} />
             </div>
-            <div className="bg-primary-bg rounded-[20px] flex justify-center items-center ">
-              <p className=" text-xs font-normal text-center ">
+            <div className="bg-primary-bg rounded-[20px] flex justify-center px-1 items-center ">
+              <p className=" lg:text-xs text-[8px] font-normal text-center ">
                 Company raised
-                <p className="text-xl font-semibold leading-6">$2.7 million</p>
+                <p className="lg:text-xl text-base font-semibold leading-6">$2.7 million</p>
                 in seed funding led by Venture Catalysts and supported by
                 multiple investors
               </p>
             </div>
-            <div className="bg-primary-bg rounded-[20px] bg-[url('/src/assets/images/webMob/biotecnika/bioBg1.png')] bg-no-repeat  flex justify-center items-center ">
-              <p className=" text-xs font-normal text-center ">
+            <div className="bg-primary-bg rounded-[20px] py-3 px-2 bg-[url('/src/assets/images/webMob/biotecnika/bioBg1.png')] bg-no-repeat  flex justify-center items-center ">
+              <p className=" lg:text-xs text-[8px] font-normal text-center ">
                 The company has seen substantial growth in device subscriptions,
                 with over
-                <p className="text-xl font-semibold leading-6">30,000</p>
+                <p className="lg:text-xl text-base font-semibold leading-6">30,000</p>
                 currently active
               </p>
             </div>
@@ -812,9 +799,7 @@ const webmobData: {
             </div>
             <div className="bg-[#404042] rounded-[20px] col-span-2 bg-[url('/src/assets/images/webMob/biotecnika/biobg.png')] bg-no-repeat gap-[20px] py-5 flex justify-center items-center ">
               <img src={cuia3} className=" " />
-              <img src={cuia4} className="" />
-              <img src={cuia5} className="" />
-              <img src={cuia6} className="" />
+             
             </div>
           </div>
         ),
@@ -840,21 +825,21 @@ const webmobData: {
               <img src={letshego2} className="h-full" />
             </div>
             <div className="bg-primary-bg rounded-[20px] flex justify-center items-center ">
-              <p className=" text-xs font-normal text-center px-5 ">
+              <p className=" lg:text-xs text-[9px] font-normal text-center px-5 ">
                 Operating in
-                <p className="text-xl font-semibold leading-6">11 countries</p>
+                <p className="lg:text-xl text-base font-semibold leading-6">11 countries</p>
                 including Botswana, Namibia, and Nigeria,
               </p>
             </div>
-            <div className="bg-primary-bg rounded-[20px] flex justify-center items-center px-5 ">
-              <p className="text-xs font-normal text-center  ">
+            <div className="bg-primary-bg rounded-[20px] flex justify-center items-center py-2 px-5 ">
+              <p className="lg:text-xs text-[9px] font-normal text-center  ">
                 Letshego has made substantial investments in digital
                 transformation, enhancing its service delivery through
                 innovative digital platforms
               </p>
             </div>
             <div className="bg-primary-bg bg-[url('/src/assets/images/webMob/biotecnika/bioBg1.png')] bg-no-repeat   rounded-[20px] flex justify-center items-center ">
-              <p className="text-xs font-normal text-center  ">
+              <p className="lg:text-xs text-[9px] font-normal text-center  ">
                 Company has been committed to driving financial inclusion and
                 improving the quality of life for underserved populations
               </p>
@@ -878,15 +863,15 @@ const webmobData: {
         ],
         companyName: "Calm AR",
         gridElements: (
-          <div className="grid grid-cols-3 gap-[11px] bg-white font-primary  ">
+          <div className="grid grid-cols-3 gap-[11px] lg:max-w-[56%] bg-white font-primary  ">
             <div className="bg-primary-bg rounded-[20px] row-span-2  bg-[url('/src/assets/images/webMob/roost/roostbg.png')] bg-no-repeat  flex items-center justify-center text-center ">
-              <h1 className="font-primary lg:text-xs text-[8px] px-5 w-full break-words ">
+              <h1 className="font-primary lg:text-xs text-[8px] px-1 w-full break-words ">
                 Augmented mode to virtually see and visualize the entire
                 pipeline. The system highlights the potential/defective/damaged
                 pipeline for immediate attention
               </h1>
             </div>
-            <div className="bg-primary-bg rounded-[20px] col-span-2 flex justify-center items-center   px-6 py-8 ">
+            <div className="bg-primary-bg rounded-[20px] col-span-2 flex justify-center items-center   px-6 py-1 ">
               <h1 className="font-primary text-xs">
                 Notifies the department, users and the associated technician
                 assigned, in case if an anomaly occurs.
@@ -895,14 +880,14 @@ const webmobData: {
             <div className="bg-primary-bg rounded-[20px] flex items-center justify-center ">
               <img src={calm4} />
             </div>
-            <div className="bg-primary-bg rounded-[20px]  py-5 flex justify-center items-center">
+            <div className="bg-primary-bg rounded-[20px]  py-1 flex justify-center items-center">
               <img src={calm3} />
             </div>
             <div className="bg-primary-bg rounded-[20px] flex justify-center items-center ">
               <img src={calm2} />
             </div>
             <div className="bg-primary-bg rounded-[20px]  col-span-2 flex gap-[22px] py-5 items-center justify-center ">
-              <img srcSet={calm1} className="h-full w-[50%]" />
+              <img srcSet={calm1} className="h-[100%] w-[40%] " />
             </div>
           </div>
         ),
@@ -1106,7 +1091,7 @@ export const WebMob = () => {
 
   return (
     <ContentWrapper>
-      <div className="lg:flex space-y-5  py-40 lg:space-x-5 font-primary">
+      <div className="lg:flex space-y-5  lg:py-40 py-20 lg:space-x-5 font-primary">
         <div className="relative lg:w-1/4 m-auto ">
           <button
             onClick={() => setIsDropdownOpen((prev) => !prev)}
@@ -1159,7 +1144,7 @@ export const WebMob = () => {
         </div>
 
         <div className="bg-primary-bg rounded-[20px] px-[15px] w-full py-[15px] font-primary">
-          <div className="lg:flex bg-white lg:h-[500px] px-3 py-2 rounded-2xl">
+          <div className="lg:flex bg-white lg:h-[600px] px-3 py-4 rounded-2xl">
             {webmobData[activeCategory] && (
               <WebmobInput
                 title={webmobData[activeCategory].title}

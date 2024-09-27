@@ -23,22 +23,22 @@ const SuccessStoryInput: React.FC<SuccessStoryInputProps> = ({
   trustedBy,
 }) => {
   return (
-    <div className="max-w-[800px] h-fit ">
-      <div className="flex items-center font-primary border-b-[3px] pb-2">
-        <div className="flex items-center">
-          <img src={logo1} alt="Company Logo" />
-          <div className="pl-1 pr-[36px] space-y-[-20px]">
-            <p className="text-xl font-medium">{companyTagline}</p>
-            <p className="text-[65px] font-semibold text-[#628B00]">
+    <div className=" w-fit h-fit ">
+      <div className="flex items-center font-primary border-b-[3px] gap-8 pb-2">
+        <div className="flex  items-center">
+          <img src={logo1} className="lg:h-fit lg:w-fit h-[25%] w-[25%] " />
+          <div className="pl-1 pr-[36px] lg:space-y-[-20px] space-y-[-10px]">
+            <p className="lg:text-xl text-[14.2px] font-medium">{companyTagline}</p>
+            <p className="lg:text-[65px] text-[40px]  font-semibold text-[#628B00]">
               {companyName}
             </p>
           </div>
         </div>
-        <div className="space-y-[8px] border-l-2 p-[19px]">
+        <div className="space-y-[8px] lg:text-xs text-[8.6px]  border-l-2 p-[19px]">
           <h1>{trustedBy}</h1>
-          <div className="flex justify-evenly">
+          <div className="flex  justify-evenly">
             {trustedByLogos.map((logo, index) => (
-              <img key={index} src={logo} alt={`Trusted by logo ${index}`} />
+              <img key={index} src={logo} className="lg:h-fit lg:w-fit h-[50%] w-[50%] " />
             ))}
           </div>
         </div>
@@ -52,7 +52,7 @@ const SuccessStoryInput: React.FC<SuccessStoryInputProps> = ({
         {achievements.map((achievement, index) => (
           <div key={index} className="flex items-start space-x-2">
             <img src={logo2} alt={`Achievement logo ${index}`} />
-            <h1 className="font-medium text-lg  leading-[27px]">
+            <h1 className="font-medium lg:text-lg text-xs leading-[27px]">
               {achievement.description}
             </h1>
           </div>

@@ -78,20 +78,20 @@ export const OurSolution = () => {
     <ContentWrapper>
       <div className="font-primary  font-extralight text-[40.86px] py-[89px]">
         <h1 className="pb-14">Our Solution</h1>
-        <div className="grid lg:grid-cols-4 grid-cols-2 gap-5">
+        <div className="grid lg:grid-cols-4 grid-cols-2 lg:gap-5 gap-2">
         {solutions.map((solution, index) => (
   <div
     className={`relative group ${solution.className || ""}`}
     key={index}
   >
-    <img src={solution.img} className="rounded-[20px]" />
+    <img src={solution.img} className="rounded-[20px] w-full h-full " />
     
-    <div className="absolute bottom-0 left-0  rounded-[20px]  right-0 text-center text-white text-xl font-medium p-4 transition-transform duration-300">
+    <div className="absolute bottom-0 left-0  rounded-[20px]  right-0 text-center text-white lg:text-xl text-base font-medium p-4 transition-transform duration-300">
       <h2 className="transform translate-y-0   group-hover:translate-y-[-70px]">{solution.title}</h2>
     </div>
 
     <div className="absolute inset-0 flex items-end justify-center">
-      <div className="p-2 rounded-[20px] bg-black bg-opacity-60  text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs">
+      <div className="p-2 rounded-[20px] bg-black bg-opacity-60  text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[7px] lg:text-xs">
         <div className="transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
           <span>{solution.desc}</span>
         </div>

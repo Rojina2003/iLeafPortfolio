@@ -6,7 +6,7 @@ const Home = () => {
       <div className=" relative">
         <img className="h-fit  lg:p-[71px] p-6 " src={CompanyLogo} />
         <img
-          className="lg:bg-side-bg lg:w-fit w-[50%] bg-right-top  absolute top-0 right-0 "
+          className="lg:bg-side-bg lg:w-fit w-[40%] bg-right-top  absolute top-0 right-0 "
           src={SideImg}
         />
       </div>

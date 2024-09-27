@@ -206,13 +206,13 @@ export const SuccessStories = () => {
   }, [activeIndex]);
 
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
       <img src={bg1} className="absolute bottom-0" />
       <img src={bg2} className="absolute top-0 right-0" />
       <ContentWrapper>
-        <div className="lg:flex font-extralight font-primary items-center max-w-[80%] py-[100px] space-x-2 relative ">
+        <div className="lg:flex font-extralight font-primary items-center lg:max-w-[80%] lg:py-[100px] space-x-2 relative ">
           <div>
-            <h1 className="text-[40.86px] pb-[145px]">Success Stories</h1>
+            <h1 className="lg:text-[40.86px] text-[26px] pb-[18px] lg:pb-[145px]">Success Stories</h1>
             <div className="relative">
               <div
                 ref={scrollRef}
@@ -236,7 +236,7 @@ export const SuccessStories = () => {
                   <img
                     src={successStoriesData[activeIndex].logo}
                     alt={successStoriesData[activeIndex].companyName}
-                    className={`w-[60px] h-[60px] transition-transform duration-300 ${
+                    className={`w-[90px] h-[90px] transition-transform duration-300 ${
                       activeIndex === activeIndex ? "scale-150" : ""
                     }`}
                   />
