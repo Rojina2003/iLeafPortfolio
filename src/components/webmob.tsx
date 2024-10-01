@@ -278,8 +278,8 @@ const webmobData: {
         ],
         companyName: "BiotecNika",
         gridElements: (
-          <div className="grid grid-cols-3 gap-[11px] bg-white font-primary  ">
-            <div className="bg-primary-bg rounded-[20px] col-span-2 flex flex-col justify-center items-center px-5 ">
+          <div className="grid grid-cols-5 gap-[11px] bg-white font-primary  ">
+            <div className="bg-primary-bg rounded-[20px] col-span-3 flex flex-col justify-center items-center px-5 ">
               <div className=" lg:text-xs text-[9px] ">
                 BioTecNika has grown into one of
                 <div className="lg:text-xl text-base font-semibold lg:leading-6 leading-4 ">
@@ -287,17 +287,17 @@ const webmobData: {
                 </div>
               </div>
             </div>
-            <div className="bg-[#404042] rounded-[20px] row-span-2 h-full ">
+            <div className="bg-[#404042] col-span-2 rounded-[20px] row-span-2 h-full ">
               <img src={bio2} className=" h-full " />
             </div>
-            <div className="bg-primary-bg rounded-[20px] flex justify-center items-center ">
+            <div className="bg-primary-bg rounded-[20px]  flex justify-center items-center ">
               <div className="lg:text-xs text-[9px] text-center">
                 {" "}
                 Launched a web TV channel, expanding their reach beyond print
                 media
               </div>
             </div>
-            <div className="bg-primary-bg rounded-[20px] bg-[url('/src/assets/images/webMob/biotecnika/bioBg1.png')] bg-no-repeat  flex justify-center items-center ">
+            <div className="bg-primary-bg rounded-[20px] col-span-2 bg-[url('/src/assets/images/webMob/biotecnika/bioBg1.png')] bg-no-repeat  flex justify-center items-center ">
               <div className="text-center tlg:text-xs text-[9px] font-normal ">
                 Over
                 <div className="lg:text-xl text-base font-semibold ">1L+</div>
