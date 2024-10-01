@@ -56,7 +56,7 @@ const OurTechnologyStack = () => {
         </div>
         <div className="lg:pt-[52px] pb-[142px] ">
           <div className="max-w-[1295px] m-auto border-[1px] border-[#818181] rounded-3xl ">
-            <div className="flex flex-wrap font-bold lg:text-[20px] text-xs justify-evenly p-[28px]">
+            <div className="flex flex-wrap font-bold gap-3 lg:text-[20px] text-xs justify-evenly p-[28px]">
               <h1
                 onClick={() => handleCategoryClick("web")}
                 onMouseEnter={() => handleMouseEnter("web", null)}

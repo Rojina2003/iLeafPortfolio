@@ -9,9 +9,10 @@ import ContentWrapper from "../ui/wrappers";
 
 const AboutUs = () => {
   return (
-    <div className="bg-black  font-primary  ">
+    <div className="bg-black  font-primary ">
       <ContentWrapper>
-        <div className=" rounded-[20px] bg-gradient-to-br from-white via-gray-100 to-[#DADADA] ">
+        <div className="relative md:h-[500px] h-[700px]">
+        <div className=" rounded-[20px] absolute z-10 -top-8 bg-gradient-to-br from-white via-gray-100 to-[#DADADA] ">
           <div className="p-10 font-extralight lg:text-[40.86px] text-[26px] ">
             AboutUs
           </div>
@@ -26,7 +27,7 @@ const AboutUs = () => {
             cutting-edge technologies such as AI, AR, ML, and RPA, coupled with
             proficient mobile and web application solutions.
           </div>
-          <div className=" flex flex-row flex-wrap gap-5 justify-evenly items-center w-fit pt-[94px] pb-10 px-10 ">
+          <div className=" flex flex-row flex-wrap lg:gap-5 gap-1 justify-evenly items-center w-fit pt-[94px] pb-10 lg:px-10 px-3 ">
             <img className="h-fit" src={nasscom} />
             <img className="h-fit" src={gtech} />
             <img className="h-fit" src={clutch} />
@@ -35,7 +36,8 @@ const AboutUs = () => {
             <img className="h-fit" src={appFutura} />
           </div>
         </div>
-        <div className=" font-thin lg:py-[73px] py-6 lg:pt-[138px] pt-[80px] text-white md:flex">
+        </div>
+        <div className=" font-thin lg:py-[73px] py-6  pt-[80px] text-white md:flex">
           <div className="lg:max-w-[60%] " >
             <div className="font-extralight lg:pb-10 pb-[13px] lg:text-[40.86px] text-[26px] ">
               Where We Stand
@@ -77,8 +79,8 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
-          <div className=" flex items-end ">
-            <img src={map} />
+          <div className=" flex items-end justify-start ">
+            <img src={map} className="h-fit w-fit" />
           </div>
         </div>
       </ContentWrapper>

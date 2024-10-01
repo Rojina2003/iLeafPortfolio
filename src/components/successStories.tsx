@@ -181,8 +181,14 @@ export const SuccessStories = () => {
   const [canScrollUp, setCanScrollUp] = useState(false);
   const [canScrollDown, setCanScrollDown] = useState(true);
   const [activeIndex, setActiveIndex] = useState<number>(3);
+  const [isChangingStory, setIsChangingStory] = useState(false); // State to track story change
+  const [transitionDirection, setTransitionDirection] = useState<"up" | "down">(
+    "up"
+  );
 
   const handleScroll = (direction: "up" | "down") => {
+    setIsChangingStory(true); // Start the transition
+    setTransitionDirection(direction);
     setActiveIndex((prevIndex) => {
       if (direction === "up" && prevIndex > 0) {
         return prevIndex - 1;
@@ -196,6 +202,16 @@ export const SuccessStories = () => {
     });
   };
 
+  useEffect(() => {
+    if (isChangingStory) {
+      const timer = setTimeout(() => {
+        setIsChangingStory(false);
+      }, 300); // Match this duration with the CSS transition duration
+      return () => clearTimeout(timer);
+    }
+  }, [isChangingStory]);
+
+
   const updateScrollButtons = () => {
     setCanScrollUp(activeIndex > 0);
     setCanScrollDown(activeIndex < successStoriesData.length - 1);
@@ -203,20 +219,29 @@ export const SuccessStories = () => {
 
   useEffect(() => {
     updateScrollButtons();
-  }, [activeIndex]);
+    if (isChangingStory) {
+      // Reset the changing state after the transition
+      const timer = setTimeout(() => {
+        setIsChangingStory(false);
+      }, 300); // Duration of the transition
+      return () => clearTimeout(timer);
+    }
+  }, [activeIndex, isChangingStory]);
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="overflow-hidden relative ">
       <img src={bg1} className="absolute bottom-0" />
       <img src={bg2} className="absolute top-0 right-0" />
       <ContentWrapper>
-        <div className="lg:flex font-extralight font-primary items-center lg:max-w-[80%] lg:py-[100px] space-x-2 relative ">
+        <div className="lg:flex font-extralight font-primary items-center  lg:py-[100px] space-x-2 ">
           <div>
-            <h1 className="lg:text-[40.86px] text-[26px] pb-[18px] lg:pb-[145px]">Success Stories</h1>
-            <div className="relative">
+            <h1 className="lg:text-[40.86px] text-[26px] pb-[18px] lg:pb-[145px]">
+              Success Stories
+            </h1>
+            <div className=" ">
               <div
                 ref={scrollRef}
-                className="h-[310px] overflow-auto scrollbar-hide"
+                className="lg:h-[360px] h-[400px] lg:w-[800px] flex flex-col justify-between overflow-auto scrollbar-hide"
                 style={{ scrollBehavior: "smooth" }}
               >
                 <SuccessStoryInput
@@ -229,23 +254,30 @@ export const SuccessStories = () => {
                     successStoriesData[activeIndex].trustedByLogos
                   }
                   achievements={successStoriesData[activeIndex].achievements}
+                  className={`transform transition-transform duration-300 ease-in-out ${
+                    isChangingStory
+                      ? transitionDirection === "up"
+                        ? "translate-y-full"
+                        : "translate-y-[-100%]" 
+                      : "translate-y-0"
+                  }`}
                 />
-              </div>
-              <div className="lg:hidden flex justify-center mt-4">
-                <div className="transition-transform duration-300">
-                  <img
-                    src={successStoriesData[activeIndex].logo}
-                    alt={successStoriesData[activeIndex].companyName}
-                    className={`w-[90px] h-[90px] transition-transform duration-300 ${
-                      activeIndex === activeIndex ? "scale-150" : ""
-                    }`}
-                  />
+                <div className="lg:hidden flex justify-center py-4">
+                  <div className="transition-transform duration-300">
+                    <img
+                      src={successStoriesData[activeIndex].logo}
+                      alt={successStoriesData[activeIndex].companyName}
+                      className={`w-[100px]  transition-transform duration-300 ${
+                        activeIndex === activeIndex ? "scale-150" : ""
+                      }`}
+                    />
+                  </div>
                 </div>
               </div>
               <div className="flex gap-[5px] mt-4">
                 <button
                   className={`h-10 w-10 rounded-full flex items-center justify-center text-2xl cursor-pointer z-10 ${
-                    canScrollUp ? "bg-[#97C529] text-black" : "bg-gray-400"
+                    canScrollUp ? "bg-[#97C529] text-black" : "bg-[#97C529] opacity-40"
                   }`}
                   onClick={() => handleScroll("up")}
                   disabled={!canScrollUp}
@@ -265,8 +297,7 @@ export const SuccessStories = () => {
             </div>
           </div>
 
-          <div className="relative pl-[400px] pb-10 lg:block hidden">
-            {/* Semicircle logos */}
+          <div className="relative pl-[350px] pb-10 lg:block hidden">
             {successStoriesData.map((story, index) => {
               const { x, y } = calculateLogoPosition(
                 index,
@@ -287,14 +318,14 @@ export const SuccessStories = () => {
                   }}
                 >
                   <div
-                    className={`w-[160px] h-[160px]  flex items-center justify-center transition-all duration-500 ${
-                      index === activeIndex ? "scale-125" : ""
+                    className={`w-[170px] h-[170px]  flex items-center justify-center transition-all duration-500 ${
+                      index === activeIndex ? "scale-105" : ""
                     }`}
                   >
                     <img
                       src={story.logo}
                       alt={story.companyName}
-                      className={`w-[60%] h-[60%] p-2 transition-transform duration-300 ${
+                      className={`w-[70%] h-[70%] p-2 transition-transform duration-300 ${
                         index === activeIndex ? "scale-150" : ""
                       }`}
                     />
@@ -303,8 +334,6 @@ export const SuccessStories = () => {
               );
             })}
           </div>
-
-          {/* Show only the active logo for small screens */}
         </div>
       </ContentWrapper>
     </div>

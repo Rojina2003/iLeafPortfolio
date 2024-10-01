@@ -13,6 +13,7 @@ interface SuccessStoryInputProps {
   achievementsTitle?: string;
   achievements?: Achievement[];
   trustedBy?: string
+  className?: string;
 }
 
 const SuccessStoryInput: React.FC<SuccessStoryInputProps> = ({
@@ -21,10 +22,11 @@ const SuccessStoryInput: React.FC<SuccessStoryInputProps> = ({
   trustedByLogos = [],
   achievements = [],
   trustedBy,
+  className,
 }) => {
   return (
-    <div className=" w-fit h-fit ">
-      <div className="flex items-center font-primary border-b-[3px] gap-8 pb-2">
+    <div className={` ${className}`}>
+      <div className="flex items-center font-primary border-b-[3px] lg:gap-36 gap-8 pb-2">
         <div className="flex  items-center">
           <img src={logo1} className="lg:h-fit lg:w-fit h-[25%] w-[25%] " />
           <div className="pl-1 pr-[36px] lg:space-y-[-20px] space-y-[-10px]">
@@ -36,7 +38,7 @@ const SuccessStoryInput: React.FC<SuccessStoryInputProps> = ({
         </div>
         <div className="space-y-[8px] lg:text-xs text-[8.6px]  border-l-2 p-[19px]">
           <h1>{trustedBy}</h1>
-          <div className="flex  justify-evenly">
+          <div className="flex items-center justify-evenly">
             {trustedByLogos.map((logo, index) => (
               <img key={index} src={logo} className="lg:h-fit lg:w-fit h-[50%] w-[50%] " />
             ))}

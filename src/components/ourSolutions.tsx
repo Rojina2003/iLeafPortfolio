@@ -4,105 +4,115 @@ import arvr from "../assets/images/ourSolution/arvr.png";
 import healthfitness from "../assets/images/ourSolution/healthfitness.png";
 import iot from "../assets/images/ourSolution/iot.png";
 import enterprise from "../assets/images/ourSolution/enterprise.png";
-import elearning from "../assets/images/ourSolution/e-learning.png";
+import elearning from "../assets/images/ourSolution/e-learning1.png";
 import oilgas from "../assets/images/ourSolution/oilgas.png";
 import banking from "../assets/images/ourSolution/banking.png";
 import travel from "../assets/images/ourSolution/travel.png";
 import govt from "../assets/images/ourSolution/govt.png";
 import ecommerce from "../assets/images/ourSolution/e-commerce.png";
 
-const solutions = [
-  {
-    img: arvr,
-    title: "AI/AR Solutions",
-    desc: "We deliver cutting-edge AI/AR solutions for immersive and intelligent experiences, transforming operations and engagement across various industries.",
-  },
-  {
-    img: sports,
-    title: "Sports Technology",
-    desc: "We offer advanced technology for enhanced sports performance and management, providing athletes & teams with innovative tools for training and analysis.",
-  },
-  {
-    img: healthfitness,
-    title: "Health & Fitness",
-    desc: "We provide innovative healthcare and fitness technology aimed at enhancing overall well-being and promoting healthier lifestyles.",
-    className: "row-span-3",
-  },
-  {
-    img: iot,
-    title: "IoT Solutions",
-    desc: "Our innovative IoT solutions provide seamless connectivity and intelligent automation, transforming operations across diverse industries.",
-  },
-  {
-    img: enterprise,
-    title: "Enterprise Solutions",
-    desc: "We specialize in comprehensive enterprise solutions tailored to meet your business needs, driving efficiency, scalability, and innovation.",
-  },
-  {
-    img: elearning,
-    title: "E-Learning Technology",
-    desc: "We deliver innovative technology for effective e-learning experiences, enabling interactive learning environments and personalised education solutions.",
-    className: "row-span-2",
-  },
-  {
-    img: oilgas,
-    title: "Oil & Gas Solutions",
-    desc: "We offer specialised technology solutions designed to optimize operations in the oil and gas industry, ensuring efficiency, safety, and sustainability.",
-    className: "row-span-2",
-  },
-  {
-    img: banking,
-    title: "Banking Solutions",
-    desc: "We provide advanced technology solutions for the banking and finance sectors, enhancing security, efficiency, and customer experiences.",
-    className: "row-span-2",
-  },
-  {
-    img: travel,
-    title: "Travel Technology",
-    desc: "We specialize in advanced technology solutions for the travel and hospitality industry, elevating guest experiences and boosting operational efficiency.",
-  },
-  {
-    img: govt,
-    title: "Government Solutions",
-    desc: "We provide state-of-the-art technology solutions for government and agency services, optimizing efficiency and enhancing citizen experiences through innovative digital platforms.",
-  },
-  {
-    img: ecommerce,
-    title: "E-Commerce Solutions",
-    desc: "We provide comprehensive e-commerce solutions tailored to optimize online retail experiences, driving seamless transactions and fostering business growth.",
-  },
-];
-
 export const OurSolution = () => {
+  const data = [
+    {
+      src: arvr,
+      title: "AR/VR",
+      desc: "We deliver cutting-edge AI/AR solutions for immersive and intelligent experiences, transforming operations and engagement across various industries.",
+    },
+    {
+      src: sports,
+      title: "Sports",
+      desc: "We offer advanced technology for enhanced sports performance and management, providing athletes & teams with innovative tools for training and analysis.",
+    },
+    {
+      src: healthfitness,
+      title: "Healthcare & Fitness",
+      desc: "We provide innovative healthcare and fitness technology aimed at enhancing overall well-being and promoting healthier lifestyles.",
+    },
+    {
+      src: iot,
+      title: "IoT",
+      desc: "Our innovative IoT solutions provide seamless connectivity and intelligent automation, transforming operations across diverse industries.",
+    },
+    {
+      src: enterprise,
+      title: "Enterprise Solutions",
+      desc: "We specialize in comprehensive enterprise solutions tailored to meet your business needs, driving efficiency, scalability, and innovation.",
+    },
+    {
+      src: govt,
+      title: "Govt. & Emergency Services",
+      desc: "We provide state-of-the-art technology solutions for government and agency services, optimizing efficiency and enhancing citizen experiences through innovative digital platforms.",
+    },
+
+    {
+      src: oilgas,
+      title: "Oil & Gas",
+      desc: "We offer specialised technology solutions designed to optimize operations in the oil and gas industry, ensuring efficiency, safety, and sustainability.",
+    },
+    {
+      src: banking,
+      title: "Banking & Finance",
+      desc: "We provide advanced technology solutions for the banking and finance sectors, enhancing security, efficiency, and customer experiences.",
+    },
+    {
+      src: travel,
+      title: "Travel & Hospitality",
+      desc: "We specialize in advanced technology solutions for the travel and hospitality industry, elevating guest experiences and boosting operational efficiency.",
+    },
+    {
+      src: elearning,
+      title: "E Learning",
+      desc: "We deliver innovative technology for effective e-learning experiences, enabling interactive learning environments and personalised education solutions.",
+    },
+    {
+      src: ecommerce,
+      title: "E commerce",
+      desc: "We provide comprehensive e-commerce solutions tailored to optimize online retail experiences, driving seamless transactions and fostering business growth.",
+    },
+  ];
+
   return (
     <ContentWrapper>
-      <div className="font-primary  font-extralight text-[40.86px] py-[89px]">
-        <h1 className="pb-14">Our Solution</h1>
-        <div className="grid lg:grid-cols-4 grid-cols-2 lg:gap-5 gap-2">
-        {solutions.map((solution, index) => (
-  <div
-    className={`relative group ${solution.className || ""}`}
-    key={index}
-  >
-    <img src={solution.img} className="rounded-[20px] w-full h-full " />
-    
-    <div className="absolute bottom-0 left-0  rounded-[20px]  right-0 text-center text-white lg:text-xl text-base font-medium p-4 transition-transform duration-300">
-      <h2 className="transform translate-y-0   group-hover:translate-y-[-70px]">{solution.title}</h2>
-    </div>
-
-    <div className="absolute inset-0 flex items-end justify-center">
-      <div className="p-2 rounded-[20px] bg-black bg-opacity-60  text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[7px] lg:text-xs">
-        <div className="transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-          <span>{solution.desc}</span>
-        </div>
-      </div>
-    </div>
-  </div>
-))}
-
-
-        </div>
+      <h1 className="font-primary font-extralight text-[40.86px] leading-[61.29px] pb-14 pt-20">
+        Our Solutions
+      </h1>
+      <div className="grid lg:grid-cols-4 grid-cols-2 h-full w-full lg:gap-[20px] gap-[5px] lg:pb-0 pb-16">
+        {data.map((item, index) => (
+          <div
+            key={index}
+            className={`relative group overflow-hidden lg:rounded-[20px] rounded-xl ${getGridAlignment(
+              index
+            )}`}
+          >
+            <img src={item.src} className="w-full h-full object-cover" />
+            <div className="absolute inset-0 flex flex-col justify-end  bg-black bg-opacity-20 group-hover:bg-opacity-80 transition-all duration-500">
+              <div className="flex flex-col transform group-hover:translate-y-[-17px] transition-transform duration-500 ease-in-out">
+                <h2 className="text-white md:text-xl text-xs px-2 font-medium ">
+                  {item.title}
+                </h2>
+                <p className="text-white p-1 md:text-xs text-[7px] font-light opacity-0 group-hover:opacity-100 transition-opacity duration-50">
+                  {item.desc}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </ContentWrapper>
   );
+};
+
+const getGridAlignment = (index: number) => {
+  switch (index) {
+    case 2:
+      return "row-span-3"; // Healthcare & Fitness
+    case 5:
+      return "row-span-2"; // E Learning
+    case 6:
+      return "row-span-2"; // Oil & Gas
+    case 7:
+      return "row-span-2"; // Banking & Finance
+    default:
+      return "";
+  }
 };
