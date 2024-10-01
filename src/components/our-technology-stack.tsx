@@ -30,21 +30,17 @@ import ContentWrapper from "../ui/wrappers";
 
 const OurTechnologyStack = () => {
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
-  const [hoveredImageName, setHoveredImageName] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-  const handleMouseEnter = (category: string, imageName: string | null) => {
+  const handleMouseEnter = (category: string) => {
     setHoveredCategory(category);
-    setHoveredImageName(imageName);
   };
 
   const handleMouseLeave = () => {
     setHoveredCategory(null);
-    setHoveredImageName(null);
   };
 
   const handleCategoryClick = (category: string) => {
-    // Toggle category selection
     setSelectedCategory(selectedCategory === category ? null : category);
   };
 
@@ -59,7 +55,7 @@ const OurTechnologyStack = () => {
             <div className="flex flex-wrap font-bold gap-3 lg:text-[20px] text-xs justify-evenly p-[28px]">
               <h1
                 onClick={() => handleCategoryClick("web")}
-                onMouseEnter={() => handleMouseEnter("web", null)}
+                onMouseEnter={() => handleMouseEnter("web")}
                 onMouseLeave={handleMouseLeave}
                 className={
                   hoveredCategory && hoveredCategory !== "web"
@@ -71,7 +67,7 @@ const OurTechnologyStack = () => {
               </h1>
               <h1
                 onClick={() => handleCategoryClick("dev")}
-                onMouseEnter={() => handleMouseEnter("dev", null)}
+                onMouseEnter={() => handleMouseEnter("dev")}
                 onMouseLeave={handleMouseLeave}
                 className={
                   hoveredCategory && hoveredCategory !== "dev"
@@ -83,7 +79,7 @@ const OurTechnologyStack = () => {
               </h1>
               <h1
                 onClick={() => handleCategoryClick("mob")}
-                onMouseEnter={() => handleMouseEnter("mob", null)}
+                onMouseEnter={() => handleMouseEnter("mob")}
                 onMouseLeave={handleMouseLeave}
                 className={
                   hoveredCategory && hoveredCategory !== "mob"
@@ -95,7 +91,7 @@ const OurTechnologyStack = () => {
               </h1>
               <h1
                 onClick={() => handleCategoryClick("cloud")}
-                onMouseEnter={() => handleMouseEnter("cloud", null)}
+                onMouseEnter={() => handleMouseEnter("cloud")}
                 onMouseLeave={handleMouseLeave}
                 className={
                   hoveredCategory && hoveredCategory !== "cloud"
@@ -107,7 +103,7 @@ const OurTechnologyStack = () => {
               </h1>
               <h1
                 onClick={() => handleCategoryClick("data")}
-                onMouseEnter={() => handleMouseEnter("data", null)}
+                onMouseEnter={() => handleMouseEnter("data")}
                 onMouseLeave={handleMouseLeave}
                 className={
                   hoveredCategory && hoveredCategory !== "data"
@@ -123,17 +119,13 @@ const OurTechnologyStack = () => {
               <div className="border-[1px]  rounded-[14px] opacity-[50%]"></div>
 
               <div
-                className={`rounded-[14px] ${
+                className={` rounded-[14px] ${
                   hoveredCategory === "web" ? "opacity-100" : "opacity-50"
                 }`}
-                onMouseEnter={() => handleMouseEnter("web", "Web 1")}
-                onMouseLeave={handleMouseLeave}
               >
                 <img src={web1} />
-                {hoveredCategory === "web" && hoveredImageName === "Web 1" && (
-                  <div className="text-center text-white text-sm">Web 1</div>
-                )}
               </div>
+
               <div className="border-[1px]  rounded-[14px] opacity-[50%]"></div>
               <div className="border-[1px]  rounded-[14px] opacity-[50%]"></div>
               <div

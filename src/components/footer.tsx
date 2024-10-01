@@ -1,5 +1,4 @@
 import ContentWrapper from "../ui/wrappers";
-// import companyLogo from "../assets/images/icons/Frame 3.png";
 
 export const Footer = () => {
   return (
@@ -8,7 +7,7 @@ export const Footer = () => {
         <h1 className="pt-[90px] pb-[53px] font-extralight text-[40.86px]  ">
           Contact Us
         </h1>
-        <div className="grid lg:grid-cols-3 lg:w-[710px] w-[200px] gap-[100px]  ">
+        <div className="grid lg:grid-cols-3 lg:w-[710px] w-[200px] lg:gap-[100px] gap-[50px] ">
           <div className="a ">
             <h1 className="  text-[#81AC40] text-[29.92px] font-extralight ">
               India (HO)
