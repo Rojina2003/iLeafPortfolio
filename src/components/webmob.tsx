@@ -1,3 +1,5 @@
+/// <reference types="vite-plugin-svgr/client" />
+
 import { useState } from "react";
 import { WebmobInput } from "../ui/webmobInput";
 import ContentWrapper from "../ui/wrappers";

@@ -1,8 +1,7 @@
-/// <reference types="vite-plugin-svgr/client" />
 
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
-import appStore from "../assets/images/webMob/appStore.svg";
-import googlePlay from "../assets/images/webMob/googlePlay.svg";
+import appStore from "../assets/images/webMob/appStore.png";
+import googlePlay from "../assets/images/webMob/googlePlay.png";
 
 interface WebmobInputProps {
   title: string;
@@ -61,7 +60,7 @@ export const WebmobInput = ({
         ))}
       </div>
 
-      <div className="lg:flex hidden items-end pb-3 gap-[13px]">
+      <div className="lg:flex hidden items-end  gap-[13px]">
         <img src={appStore} className="h-fit w-fit" />
         <img src={googlePlay} className="h-fit w-fit" />
       </div>

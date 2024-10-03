@@ -186,6 +186,18 @@ export const SuccessStories = () => {
     "up"
   );
 
+  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(window.innerWidth <= 768);
+
+  // Update screen size
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const handleScroll = (direction: "up" | "down") => {
     setIsChangingStory(true); // Start the transition
     setTransitionDirection(direction);
@@ -219,26 +231,17 @@ export const SuccessStories = () => {
 
   useEffect(() => {
     updateScrollButtons();
-    if (isChangingStory) {
-      // Reset the changing state after the transition
-      const timer = setTimeout(() => {
-        setIsChangingStory(false);
-      }, 300); // Duration of the transition
-      return () => clearTimeout(timer);
-    }
-  }, [activeIndex, isChangingStory]);
+  }, [activeIndex]);
 
   return (
     <div className="overflow-hidden relative ">
-      <img src={bg1} className="absolute bottom-0" />
-      <img src={bg2} className="absolute top-0 right-0" />
+       <img src={bg1} className="absolute bottom-0" />
+       <img src={bg2} className="absolute top-0 right-0" />
       <ContentWrapper>
-        <div className="lg:flex font-extralight font-primary items-center  lg:py-[100px] space-x-2 ">
+        <div className="lg:flex font-extralight font-primary items-center lg:py-[100px] space-x-2">
           <div>
-            <h1 className="lg:text-[40.86px] text-[26px] pb-[18px] lg:pb-[145px]">
-              Success Stories
-            </h1>
-            <div className=" ">
+            <h1 className="lg:text-[40.86px] text-[26px] pb-[18px] lg:pb-[145px]">Success Stories</h1>
+            <div>
               <div
                 ref={scrollRef}
                 className="lg:h-[360px] h-[400px] lg:w-[800px] flex flex-col justify-between overflow-auto scrollbar-hide"
@@ -246,28 +249,27 @@ export const SuccessStories = () => {
               >
                 <SuccessStoryInput
                   companyName={successStoriesData[activeIndex].companyName}
-                  companyTagline={
-                    successStoriesData[activeIndex].companyTagline
-                  }
+                  companyTagline={successStoriesData[activeIndex].companyTagline}
                   trustedBy={successStoriesData[activeIndex].trustedBy}
-                  trustedByLogos={
-                    successStoriesData[activeIndex].trustedByLogos
-                  }
+                  trustedByLogos={successStoriesData[activeIndex].trustedByLogos}
                   achievements={successStoriesData[activeIndex].achievements}
-                  className={`transform transition-transform duration-300 ease-in-out ${
-                    isChangingStory
-                      ? transitionDirection === "up"
-                        ? "translate-y-full"
-                        : "translate-y-[-100%]" 
-                      : "translate-y-0"
+                  className={`transform ${
+                    isSmallScreen
+                      ? "" // No animation on small screens
+                      : `transition-transform duration-300 ease-in-out ${isChangingStory
+                        ? transitionDirection === "up"
+                          ? "translate-y-[-120%]"
+                          : "translate-y-[150%]"
+                        : "translate-y-0"}`
                   }`}
                 />
+                {/* Mobile logo carousel */}
                 <div className="lg:hidden flex justify-center py-4">
-                  <div className="transition-transform duration-300">
+                  <div className={`transition-transform duration-300 ${isSmallScreen ? "" : ""}`}>
                     <img
                       src={successStoriesData[activeIndex].logo}
                       alt={successStoriesData[activeIndex].companyName}
-                      className={`w-[100px]  transition-transform duration-300 ${
+                      className={`w-[100px] ${isSmallScreen ? "" : "transition-transform duration-300"} ${
                         activeIndex === activeIndex ? "scale-150" : ""
                       }`}
                     />
@@ -297,19 +299,17 @@ export const SuccessStories = () => {
             </div>
           </div>
 
+          {/* Logo carousel for large screens */}
           <div className="relative pl-[350px] pb-10 lg:block hidden">
             {successStoriesData.map((story, index) => {
-              const { x, y } = calculateLogoPosition(
-                index,
-                activeIndex,
-                successStoriesData.length
-              );
-
+              const { x, y } = calculateLogoPosition(index, activeIndex, successStoriesData.length);
               return (
                 <div
                   key={index}
                   className={`absolute overflow-hidden transition-transform duration-500 ease-in-out ${
-                    index === activeIndex ? "active-logo" : ""
+                    isSmallScreen
+                      ? "" // Disable animation on small screens
+                      : index === activeIndex ? "active-logo" : ""
                   }`}
                   style={{
                     transform: `translate(${x}px, ${y}px)`,
@@ -318,15 +318,19 @@ export const SuccessStories = () => {
                   }}
                 >
                   <div
-                    className={`w-[170px] h-[170px]  flex items-center justify-center transition-all duration-500 ${
-                      index === activeIndex ? "scale-105" : ""
+                    className={`w-[170px] h-[170px] flex items-center justify-center ${
+                      isSmallScreen
+                        ? "" // No animation on small screens
+                        : `transition-all duration-500 ${index === activeIndex ? "scale-105" : ""}`
                     }`}
                   >
                     <img
                       src={story.logo}
                       alt={story.companyName}
-                      className={`w-[70%] h-[70%] p-2 transition-transform duration-300 ${
-                        index === activeIndex ? "scale-150" : ""
+                      className={`w-[70%] h-[70%] p-2 ${
+                        isSmallScreen
+                          ? "" // Disable logo scaling on small screens
+                          : `transition-transform duration-300 ${index === activeIndex ? "scale-150" : ""}`
                       }`}
                     />
                   </div>

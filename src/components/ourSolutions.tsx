@@ -43,7 +43,6 @@ export const OurSolution = () => {
       title: "Govt. & Emergency Services",
       desc: "We provide state-of-the-art technology solutions for government and agency services, optimizing efficiency and enhancing citizen experiences through innovative digital platforms.",
     },
-
     {
       src: oilgas,
       title: "Oil & Gas",
@@ -84,17 +83,20 @@ export const OurSolution = () => {
               index
             )}`}
           >
-            <img src={item.src} className="w-full h-full object-cover" />
-            <div className="absolute inset-0 flex flex-col justify-end  bg-black bg-opacity-20 group-hover:bg-opacity-80 transition-all duration-500">
-              <div className="flex flex-col transform group-hover:translate-y-[-17px] transition-transform duration-500 ease-in-out">
-                <h2 className="text-white md:text-xl text-xs px-2 font-medium ">
+            <img
+              src={item.src}
+              className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-in-out"
+            />
+            <div className="absolute inset-0 flex flex-col justify-end  group-hover:bg-black  group-hover:bg-opacity-70 transition-all duration-500">
+              <div className="flex flex-col transition-transform duration-500 ease-in-out ">
+                <h2 className="text-white md:text-xl px-2 rounded-[20px] text-xs absolute bottom-0 bg-gradient-to-t from-black 10%  w-full  font-medium transform translate-y-0 md:group-hover:translate-y-[-80px] group-hover:translate-y-[-60px] transition-transform duration-500">
                   {item.title}
                 </h2>
-                <p className="text-white p-1 md:text-xs text-[7px] font-light opacity-0 group-hover:opacity-100 transition-opacity duration-50">
+                <p className="text-white md:text-xs p-2 bg-black bg-opacity-20  text-[7px] font-light opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out transform translate-y-[20px] group-hover:translate-y-0">
                   {item.desc}
                 </p>
               </div>
-            </div>
+            </div>  
           </div>
         ))}
       </div>
